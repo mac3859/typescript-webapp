@@ -1,0 +1,28 @@
+{
+  "username": "davidwang_ayFGcN",
+  "key": "e1v1dzxqUeQqpsQwP1tQ",
+  "browsers": [
+    {
+      "browser": "chrome",
+      "os": "Windows 10",
+      "versions": ["latest", "latest-1"]
+    },
+    {
+      "browser": "firefox",
+      "os": "Windows 10",
+      "versions": ["latest", "latest-1"]
+    },
+    {
+      "browser": "safari",
+      "os": "OS X Monterey",
+      "versions": ["latest"]
+    }
+  ],
+  "run_settings": {
+    "playwright_config_file": "./playwright.config.ts",
+    "project_name": "typescript-webapp",
+    "build_name": "build-${BUILD_NUMBER}",
+    "parallels": 5
+  },
+  "test_path": "tests/*.spec.ts"
+}

@@ -1,0 +1,15 @@
+2025-02-07 15:21:37 - [32minfo[39m: Creating configuration file...
+2025-02-07 15:21:37 - [32minfo[39m: Adding new script(s) in package.json...
+2025-02-07 15:21:37 - [32minfo[39m: Setup completed
+2025-02-07 15:50:13 - [32minfo[39m: Reading configs from /Users/david/typescript-webapp/browserstack.yml
+2025-02-07 15:50:13 - [32minfo[39m: Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-02-07 15:50:25 - [32minfo[39m: Local binary started successfully
+2025-02-07 15:56:20 - [32minfo[39m: Visit https://observability.browserstack.com/builds/pkfvtn0lgzijfjidyi8pgw8cg4h6srbawgcgeqtt to view build report, insights, and many more debugging information all at one place!
+
+2025-02-07 17:58:29 - [32minfo[39m: Shutdown triggered by SIGINT
+2025-02-07 17:58:30 - [32minfo[39m: View build on BrowserStack dashboard: https://automate.browserstack.com/dashboard/v2/builds/d4b1c8727825c35bc471f2a7f66f97f597002f32
+2025-02-07 17:58:30 - [32minfo[39m: Deleting /Users/david/typescript-webapp/playwright-browserstack-sdk.config.ts
+2025-02-07 17:58:30 - [31merror[39m: Size mismatch
+2025-02-07 17:58:30 - [31merror[39m: Size mismatch
+2025-02-07 17:58:30 - [31merror[39m: already finalized or destroyed
+2025-02-07 17:58:33 - [32minfo[39m: Local binary stopped
