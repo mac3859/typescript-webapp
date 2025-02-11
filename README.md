@@ -1,3 +1,8 @@
+# Test summary attached at the end
+[Jump to Test result](#test-result)
+
+
+
 # TypeScript Web Application
 
 A modern web application built with React, TypeScript, and Vite, featuring comprehensive testing setup with Playwright and BrowserStack integration.
@@ -91,3 +96,12 @@ The BrowserStack configuration supports:
 ## License
 
 This project is licensed under the terms of the license included in the repository.
+
+
+
+
+# Test Result
+
+
+![Screenshot 2025-02-11 at 4 24 42 PM](https://github.com/user-attachments/assets/2e0b8b97-6989-4678-a8da-fc0a8ed8c376)
+
