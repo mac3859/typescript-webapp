@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Workflow to deploy static content from frontend folder to GitHub Pages with Percy
+name: Deploy static content with Percy to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -15,29 +15,41 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}  # Inject Percy token
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup Pages
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Verify available scripts
+        run: npm run
+
+      - name: Run Playwright tests with Percy
+        run: npx percy exec -- npx playwright test
+
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+
+      - name: Upload artifact (frontend folder)
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: 'frontend'
+          path: 'frontend'  # Ensure only the frontend folder is uploaded
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
