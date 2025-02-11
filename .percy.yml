@@ -1,0 +1,13 @@
+version: 2
+snapshot:
+  widths: [375, 768, 1280]
+  min-height: 1024
+  percy-css: |
+    /* Add any custom Percy-specific CSS here */
+  enable-javascript: true
+  cli-command: npx percy exec -- npm run test:browserstack
+upload:
+  files: "**/*.{png,jpg,jpeg}"
+  ignore:
+    - "**/node_modules/**"
+    - "**/.git/**"
