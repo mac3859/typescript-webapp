@@ -6,8 +6,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "firebase": "^11.2.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "vite": "^6.1.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@percy/cli": "^1.30.7",
@@ -15,10 +14,14 @@
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.1",
     "browserstack-local": "^1.5.6",
-    "browserstack-node-sdk": "^1.34.36"
+    "browserstack-node-sdk": "^1.34.36",
+    "vite": "^6.1.0"
   },
   "scripts": {
+    "dev": "vite",  // Added for local development
+    "start": "vite",  // Alias for `npm run dev`
     "test": "playwright test",
+    "test:percy": "PERCY_TOKEN=$PERCY_TOKEN npx percy exec -- npx playwright test",
     "test:browserstack": "npx browserstack-node-sdk playwright test --config=./playwright.config.ts"
   }
 }
