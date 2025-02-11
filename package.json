@@ -18,8 +18,8 @@
     "vite": "^6.1.0"
   },
   "scripts": {
-    "dev": "vite",  // Added for local development
-    "start": "vite",  // Alias for `npm run dev`
+    "dev": "vite",  
+    "start": "vite", 
     "test": "playwright test",
     "test:percy": "PERCY_TOKEN=$PERCY_TOKEN npx percy exec -- npx playwright test",
     "test:browserstack": "npx browserstack-node-sdk playwright test --config=./playwright.config.ts"
