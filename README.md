@@ -22,7 +22,7 @@ This project is a TypeScript-based web application that demonstrates modern web 
 ### Prerequisites
 
 - Node.js (Latest LTS version recommended)
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -64,8 +64,8 @@ npm run test:browserstack
 ```
 
 The BrowserStack configuration supports:
-- Chrome (latest, latest-1)
-- Firefox (latest, latest-1)
+- Chrome (latest)
+- Firefox (latest)
 - Safari (latest) on OS X Monterey
 
 ## Project Structure
