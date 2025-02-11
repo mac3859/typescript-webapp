@@ -5,7 +5,7 @@ snapshot:
   percy-css: |
     /* Add any custom Percy-specific CSS here */
   enable-javascript: true
-  cli-command: npx percy exec -- npm run test:browserstack
+
 upload:
   files: "**/*.{png,jpg,jpeg}"
   ignore:
